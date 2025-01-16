@@ -10,7 +10,7 @@ Second, even when policies perform well in simulation, they often fail to preser
 
 Third, learned policies often exhibit _undesirable behaviors_ that increase computational and energy demands @Chinchali2021. High-frequency oscillations in control signals can cause system overheating and excessive power consumption @NFv2, while complex neural architectures strain limited computational resources @hasani2021liquid. These challenges are particularly relevant for resource-constrained robotic systems that must operate efficiently in the real world.
 
-We argue that addressing these challenges requires *fundamentally rethinking* (see @introduced-concepts) how practitioners express and compose their intentions throughout the learning process. Instead of focusing solely on optimization algorithms @PPO @DDPG @SAC @TD3, existing works provide motivation for developing principled frameworks for:
+I argue that addressing these challenges requires *fundamentally rethinking* (see @introduced-concepts) how practitioners express and compose their intentions throughout the learning process. Instead of focusing solely on optimization algorithms @PPO @DDPG @SAC @TD3, existing works provide motivation for developing principled frameworks for:
 1. Specifying behavioral objectives in ways that capture intended relationships and trade-offs @Belta_Temporal @Wingate_Temporal_MORL @SAKAWA199819
 2. Preserving learned behaviors during transfer while enabling controlled adaptation @MetaSimToReal @Nagabandi2019LearningTA
 3. Ensuring efficient deployment through resource-aware policy design @Chinchali2021 @orevi2023
