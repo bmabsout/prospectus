@@ -915,25 +915,9 @@
 	issn         = {2296-9144},
 	url          = {http://dx.doi.org/10.3389/frobt.2022.799893}
 }
-@misc{mysore2020regularizing,
+@inproceedings{caps,
 	title        = {Regularizing Action Policies for Smooth Control with Reinforcement Learning},
-	author       = {Siddharth Mysore and Bassel Mabsout and Renato Mancuso and Kate Saenko},
-	year         = 2020,
-	eprint       = {2012.06644},
-	archiveprefix = {arXiv},
-	primaryclass = {cs.RO}
-}
-@misc{mysore2020train,
-	title        = {How to Train your Quadrotor: A Framework for Consistently Smooth and Responsive Flight Control via Reinforcement Learning},
-	author       = {Siddharth Mysore and Bassel Mabsout and Kate Saenko and Renato Mancuso},
-	year         = 2020,
-	eprint       = {2012.06656},
-	archiveprefix = {arXiv},
-	primaryclass = {cs.RO}
-}
-@inproceedings{mysore2021caps,
-	title        = {Regularizing Action Policies for Smooth Control with Reinforcement Learning},
-	author       = {Mysore, Siddharth* and Mabsout, Bassel* and Mancuso, Renato and Saenko, Kate},
+	author       = {Mabsout, Bassel* and Mysore, Siddharth* and Mancuso, Renato and Saenko, Kate},
 	year         = 2021,
 	booktitle    = {IEEE ICRA},
 	volume       = {},
@@ -941,9 +925,9 @@
 	pages        = {1810--1816},
 	doi          = {10.1109/ICRA48506.2021.9561138}
 }
-@article{mysore2021train,
+@article{how_to_train_your_quadrotor,
 	title        = {How to train your quadrotor: A framework for consistently smooth and responsive flight control via reinforcement learning},
-	author       = {Mysore, Siddharth* and Mabsout, Bassel* and Saenko, Kate and Mancuso, Renato},
+	author       = {Mabsout, Bassel* and Mysore, Siddharth* and Saenko, Kate and Mancuso, Renato},
 	year         = 2021,
 	journal      = {ACM TCPS},
 	publisher    = {ACM New York, NY},
@@ -1202,6 +1186,16 @@
 	year         = {2016--2019},
 	howpublished = {\url{http://pybullet.org}}
 }
+
+@article{honey_shrunk_actor,
+  title={Honey. I Shrunk The Actor: A Case Study on Preserving Performance with Smaller Actors in Actor-Critic RL},
+  author={Siddharth Mysore and Bassel El Mabsout and Renato Mancuso and Kate Saenko},
+  journal={2021 IEEE Conference on Games (CoG)},
+  year={2021},
+  pages={01-08},
+  url={https://api.semanticscholar.org/CorpusID:235489652}
+}
+
 @article{q_managed,
 	title        = {Q-Managed: A new algorithm for a multiobjective reinforcement learning},
 	author       = {Thiago Henrique Freire de Oliveira and Luiz Paulo de Souza Medeiros and Adrião Duarte Dória Neto and Jorge Dantas Melo},
@@ -1360,6 +1354,18 @@
 	year         = 2023,
 	booktitle    = {Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
 	url          = {https://openreview.net/forum?id=WZmlxIuIGR}
+}
+
+@inbook{neural_lyapunov,
+author = {Chang, Ya-Chien and Roohi, Nima and Gao, Sicun},
+title = {Neural lyapunov control},
+year = {2019},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {We propose new methods for learning control policies and neural network Lyapunov functions for nonlinear control problems, with provable guarantee of stability. The framework consists of a learner that attempts to find the control and Lyapunov functions, and a falsifier that finds counterexamples to quickly guide the learner towards solutions. The procedure terminates when no counterexample is found by the falsifier, in which case the controlled nonlinear system is provably stable. The approach significantly simplifies the process of Lyapunov control design, provides end-to-end correctness guarantee, and can obtain much larger regions of attraction than existing methods such as LQR and SOS/SDP. We show experiments on how the new methods obtain high-quality solutions for challenging robot control problems such as path tracking for wheeled vehicles and humanoid robot balancing.},
+booktitle = {Proceedings of the 33rd International Conference on Neural Information Processing Systems},
+articleno = {292},
+numpages = {10}
 }
 @article{SAKAWA199819,
 	title        = {Interactive decision-making for multiobjective linear fractional programming problems with block angular structure involving fuzzy numbers},

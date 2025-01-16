@@ -1,5 +1,5 @@
 #import "lib.typ": *
-#import "@preview/cetz:0.2.0"
+#import "@preview/cetz:0.3.1"
 #import "@preview/fontawesome:0.1.0": *
 
 // Document-wide settings
@@ -301,4 +301,31 @@
     // #v(cv_styling.header.vertical_padding)
   ]
 }
-  
+
+// Color definitions for consistent visualization
+#let state_color = primary_color
+#let action_color = blue.darken(20%)
+#let reward_color = rgb("#08680e")
+
+#let state(body) = text(fill: state_color, $#body$)
+#let action(body) = text(fill: action_color, $#body$)
+#let reward(body) = text(fill: reward_color, $#body$)
+
+// Define colored math variables
+#let st = state($s_t$)
+#let stp1 = state($s_(t+1)$)
+#let S = state($S$)
+#let a = action($a$)
+#let at = action($a_t$)
+#let A = action($A$)
+#let R = reward($R$)
+#let rt = reward($r_t$)
+#let Q = reward($Q$)
+#let V = reward($V$)
+#let pmean= math.op($overline(mu)$)
+#let loss = math.op($cal(L)$)
+#let expect = math.op($EE$, limits: true)
+#let todo(message) = {
+  locate(loc => ())
+  text(red, [TODO: #message])
+}

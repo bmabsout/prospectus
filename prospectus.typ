@@ -157,26 +157,39 @@ Main Body:
   #long_line
   #set text(fill: primary_color, weight: "bold", size: 17pt)
   #it
-  #v(0.5em)
+  #v(0.7em)
 ]
 
 #show heading.where(level: 2): it => [
-  #v(1.2em)
-  #set text(fill: primary_color.lighten(20%), weight: "medium", size: 15pt)
+  #set text(fill: primary_color.lighten(20%), weight: "medium", size: 16pt)
   #it
-  #v(0.8em)
 ]
 
 #show heading.where(level: 3): it => [
-  #v(1em)
   #set text(fill: primary_color.lighten(30%), weight: "medium", size: 13pt)
   #it
-  #v(0.6em)
+  #v(0.3em)
 ]
 
 #show heading.where(level: 4): it => {
+  v(0.5em)
   box(inset: (right: 0.1em, bottom: 0em))[#text(weight: "bold", it)]
   box(inset: (right: 0em, bottom: 0em))[#text(weight: "bold", ":")]
+}
+
+#show ref: it => {
+  if it.element != none and it.element.func() == heading {
+    if it.element.level == 4 {
+      link(it.element.location(), [(Def #numbering(
+        it.element.numbering,
+        ..counter(heading).at(it.element.location())
+      ))])
+    } else {
+      it
+    }
+  } else {
+    it
+  }
 }
 
 #set par(
@@ -185,6 +198,8 @@ Main Body:
 )
 
 #set math.equation(numbering: "(1)")
+
+// Document content begins here
 
 // At the start of the document
 #let behavioral = "behavioral retention"
@@ -225,7 +240,7 @@ Main Body:
   text(size: 14pt)[*DR. BINGZHUO ZHONG*],
   v(0.6fr),
   
-  text(size: 12pt)[January 8, 2025]
+  text(size: 12pt)[January 15, 2025]
 ))
 
 #pagebreak()
@@ -237,7 +252,7 @@ Main Body:
 #outline(
   title: "Contents",
   indent: true,
-  depth: 3
+  depth: 2
 )
 #pagebreak()
 
@@ -245,7 +260,7 @@ Main Body:
 #include "src/chapters/background.typ"
 #include "src/chapters/published_results.typ"
 #include "src/chapters/current_work.typ"
-#include "src/chapters/methodology.typ"
+// #include "src/chapters/methodology.typ"
 #include "src/chapters/timeline.typ"
 
 #bibliography("megaref.bib")
